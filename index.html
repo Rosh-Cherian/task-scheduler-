@@ -1,48 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Main page</title>
 </head>
 <body>
-  <button id="showFormButton">Show Form</button>
-  <div id="detailsForm" class="hidden">
-    <form id="inputForm">
-      <label for="field1">Field 1:</label>
+    <header>
+        <input type="checkbox" name="" id ="chk1">
+        <div class="logo"><h1>Beach<span>Dream</span></h1></div>
+        
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> About</a></li>
+                <li><a href="#"> Contact</a></li>
+                <li><a href="#"><img src="./images/user-solid.svg" alt="" height = "30"></a></li> 
+                <li><a href="#"> <img src="./images/power-off-solid.svg" alt="" height = "30"></a></li>
+            </ul>
+        <div class = "menu">
+            <label for="chk1"> <img src="./images/bars-solid.svg" alt=""></label>
+        </div>
+    </header>
+    <main class = "table">
+        <section class = "table_header">
+            <h1><strong>Schedule</strong></h1>
+        </section>
+        <section class = "table_body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Employees</th>
+                        <th> Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="A">1</td>
+                        <td><img src="./images/user-regular.svg" alt=""> Andrea</td>
+                        <td class="A">Task1</td>
+                        <td class="A"></td>
+                        <td class="A">Task2</td>
+                        <td class="A"></td>
+                        <td class="A"></td>
+                        <td class="A"></td>
+                        <td class="A">Task3</td>
+                    </tr>
+                    <tr>
+                        <td class="A">2</td>
+                        <td><img src="./images/user-regular.svg" alt="">Daniel</td>
+                        <td class="A"></td>
+                        <td class="A"></td>
+                        <td class="A">Task3</td>
+                        <td class="A"></td>
+                        <td class="A"></td>
+                        <td class="A"></td>
+                        <td class="A">Task4</td>
+                    </tr>
+                    <tr>
+                        <td class="A">3</td>
+                        <td><img src="./images/user-regular.svg" alt="">Simon</td>
+                        <td class="A"></td>
+                        <td class="A"></td>
+                        <td class="A">Task3</td>
+                        <td class="A"></td>
+                        <td class="A"><p class = "Task assigned">Task 2</p></td>
+                        <td class="A"></td>
+                        <td class="A">Task4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="buttons">
+      <button id="showFormButton">Add Task</button>
+      <div id="detailsForm" class="hidden">
+        <form id="inputForm">
+      <label for="field1">Enter Task Name:</label>
       <input type="text" id="field1" name="field1" required><br>
 
-      <label for="field2">Field 2 (Date):</label>
-      <input type="date" id "field2" name="field2" required><br>
+      <label for="field3">Task Description:</label>
+      <input type="text" id="field2" name="field2" required><br>
 
-      <label for="field3">Field 3:</label>
-      <input type="text" id="field3" name="field3" required><br>
+      <label for="field2">Deadline:</label>
+      <input type="date" id="field3" name="field3" required><br>
 
-      <label for="field4">Field 4 (Dropdown):</label>
+      <label for="field4">Domain:</label>
       <select id="field4" name="field4" required>
-        <option value="Option 1">Option 1</option>
-        <option value="Option 2">Option 2</option>
-        <option value="Option 3">Option 3</option>
+        <option value="BackEnd">BackEnd</option>
+        <option value="FrontEnd">FrontEnd</option>
+        <option value="Testing">Testing</option>
+        <option value="UI/UX">UI/UX</option>
+      </select><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <button id="showSecondFormButton">Add Employee</button>
+  <div id="details2Form" class="hidden">
+    <form id="secondForm">
+      <label for="field5">Name:</label>
+      <input type="text" id="field5" name="field5" required><br>
+
+      <label for="field6">Domain:</label>
+      <select id="field6" name="field6" required>
+        <option value="BackEnd">BackEnd</option>
+        <option value="FrontEnd">FrontEnd</option>
+        <option value="Testing">Testing</option>
+        <option value="UI/UX">UI/UX</option>
       </select><br>
 
       <button type="submit">Submit</button>
     </form>
   </div>
 
-  <!--<div id="secondFormContainer" class="hidden">-->
-    <button id="showSecondFormButton">Show Second Form</button>
-    <form id="secondForm" class="hidden">
-      <label for="field5">Field 5:</label>
-      <input type="text" id="field5" name="field5" required><br>
-
-      <label for="field6">Field 6:</label>
-      <input type="text" id="field6" name="field6" required><br>
-
-      <button type="submit">Submit Second Form</button>
-    </form>
-  <!--</div>-->
-
   <div id="submittedDetails" class="hidden">
     <p id="submittedText"></p>
   </div>
   <script src="script.js"></script>
+    </div>
 </body>
 </html>
